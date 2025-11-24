@@ -574,7 +574,9 @@ void() PlayerDie =
 	local   float   i;
 	local	string	s;	
 	self.items = self.items - (self.items & IT_INVISIBILITY);
-
+	bprint("DEATH: ");
+    bprint(self.netname);
+    bprint("\n");
 	if ((stof(infokey(world,"dq"))) != 0)
 	{
 		if (self.super_damage_finished > 0)
